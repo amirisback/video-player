@@ -37,6 +37,8 @@ object Constant {
 
     object Extra {
         private val BASE_EXTRA = appApplicationId
+        const val EXTRA_VIDEO_URL = "extra_video"
+        const val EXTRA_VIDEO_TITLE = "extra_video_title"
     }
 
     object RoomDatabase {

@@ -161,6 +161,12 @@ dependencies {
     implementation(GitHub.glide)
     implementation(GitHub.chucker)
 
+    implementation("com.google.android.exoplayer:exoplayer:2.18.1")
+    implementation("com.google.android.exoplayer:exoplayer-core:2.18.1")
+    implementation("com.google.android.exoplayer:exoplayer-dash:2.18.1")
+    implementation("com.google.android.exoplayer:exoplayer-hls:2.18.1")
+    implementation("com.google.android.exoplayer:exoplayer-ui:2.18.1")
+
     api(JetBrains.coroutinesCore)
     api(JetBrains.coroutinesAndroid)
 

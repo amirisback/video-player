@@ -18,5 +18,4 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "FrogoKickStartProject"
 include(":app")

@@ -5,7 +5,7 @@ import com.frogobox.kickstart.R
 import com.frogobox.kickstart.core.BaseActivity
 import com.frogobox.kickstart.databinding.ActivityMainBinding
 import com.frogobox.kickstart.mvvm.consumable.ConsumableFragment
-import com.frogobox.kickstart.mvvm.favorite.FavoriteFragment
+import com.frogobox.kickstart.mvvm.favorite.VideoFragment
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
 
@@ -28,7 +28,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     private fun setupFragment(savedInstanceState: Bundle?) {
         if (savedInstanceState == null) {
-            binding.bottomNavMainMenu.selectedItemId = R.id.bottom_menu_consumable
+            binding.bottomNavMainMenu.selectedItemId = R.id.bottom_menu_main
         }
     }
 
@@ -40,7 +40,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             setOnNavigationItemSelectedListener {
                 when (it.itemId) {
                     R.id.bottom_menu_consumable -> {
-                        supportActionBar?.title = getString(R.string.title_consumable)
+                        supportActionBar?.title = "Dashboard"
                         setupChildFragment(
                             frameLayout,
                             ConsumableFragment()
@@ -48,10 +48,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                     }
 
                     R.id.bottom_menu_favorite -> {
-                        supportActionBar?.title = getString(R.string.title_fav)
+                        supportActionBar?.title = "News"
                         setupChildFragment(
                             frameLayout,
-                            FavoriteFragment()
+                            MainFragment()
                         )
                     }
 
@@ -59,7 +59,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                         supportActionBar?.title = getString(R.string.title_main)
                         setupChildFragment(
                             frameLayout,
-                            MainFragment()
+                            VideoFragment()
                         )
                     }
                 }

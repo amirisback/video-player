@@ -30,6 +30,12 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".mvvm.watch.WatchActivity"
+            android:theme="@style/Theme.NoActionBar"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="true" />
+
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="@string/admob_app_id" />
